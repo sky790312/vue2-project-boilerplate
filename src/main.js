@@ -5,6 +5,8 @@ import VueI18n from 'vue-i18n'
 
 import locales from './locales'
 import router from './router'
+import store from './store'
+
 import App from './App'
 
 Vue.use(VueRouter)
@@ -20,7 +22,9 @@ Object.keys(locales).forEach(lang => {
 })
 
 const app = new Vue({
+  el: '#app',
   router: router,
+  store,
   render: h => h(App)
 })
 
