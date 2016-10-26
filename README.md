@@ -1,10 +1,12 @@
 # vue2 project example
 
 > vue2.x with vuex, vue-router, vue-resource, vue-i18n by yarn
+
 > make sure you have yarn first
+
 > you can see the commit how I build it step by step, thx
 
-## Build Setup
+## Build Setup (replace by yarn)
 
 ``` bash
 # install dependencies
