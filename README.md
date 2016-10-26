@@ -1,10 +1,14 @@
 # vue2 project example
 
-> vue2.x with vuex, vue-router, vue-resource, vue-i18n by yarn
+> vue2.x with vuex, vue-router, vue-resource, vue-i18n by vue-cli with yarn
 
-> make sure you have yarn first
+> make sure you have yarn & vue-cli first
 
-> you can see the commit how I build it step by step, thx
+> you can see the commit how I build it step by step
+
+> you can use this to start vue2 project quietly under my structure
+
+> thx..
 
 ## Build Setup (replace by yarn)
 
