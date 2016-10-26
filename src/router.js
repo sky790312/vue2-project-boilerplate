@@ -1,10 +1,7 @@
-import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Page1 from './components/page1'
-import Page2 from './components/page2'
-
-Vue.use(VueRouter)
+import Page1 from './pages/page1'
+import Page2 from './pages/page2'
 
 const routes = [
   {

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>{{ $t("example") }}</h2>
     <div>
       <router-link to="/page1">Go to page1</router-link>
       <router-link to="/page2">Go to page2</router-link>
