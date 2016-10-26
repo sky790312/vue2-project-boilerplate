@@ -1,9 +1,13 @@
 {
   "name": "vue2.x",
   "version": "1.0.0",
-  "description": "vue2.x with yarn",
-  "author": "kevinhu",
-  "private": true,
+  "description": "vue2 with vuex, vue-router, vue-resource, vue-i18n by yarn",
+  "author": "Kevin Hu",
+  "keywords": [
+    "vue",
+    "Kevin Hu"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
