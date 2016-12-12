@@ -13,9 +13,5 @@ const api = {
 // }
 
 api.asyncFunction = async (urlEnd, type, payload = {}) => {
-  let resp = {}
-  if (type === 'get') resp = await Vue.http.get(api.serverUrl + urlEnd, payload, api.timeout)
-  else if (type === 'post') resp = await Vue.http.post(api.serverUrl + urlEnd, payload, api.timeout)
-  else if (type === 'put') resp = await Vue.http.put(api.serverUrl + urlEnd, payload, api.timeout)
-  return resp
+  return await Vue.http[type](api.url + urlEnd, payload, api.timeout)
 }
