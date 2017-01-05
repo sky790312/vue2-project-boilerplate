@@ -11,6 +11,17 @@ export default {
     return {
 
     }
+  },
+  beforeRouteEnter (to, from, next) {
+    next(vm => {
+      // if get page data before route enter for page to use
+      // page component keep alive, put data to vuex
+      // check if data already exist to get async data or not
+      // ex:
+      // if (!Object.keys(vm.group).length) {
+        //
+      // }
+    })
   }
 }
 </script>

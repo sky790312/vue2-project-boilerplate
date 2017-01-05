@@ -10,7 +10,11 @@
       <router-link to="/page1">Go to page1</router-link>
       <router-link to="/page2">Go to page2</router-link>
     </div>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
     <img src="./assets/logo.png">
     <hello></hello>
   </div>
@@ -36,6 +40,15 @@ export default {
     'increment',
     'decrement'
   ])
+
+  // computed: mapGetters([
+  // ]),
+  //
+  // methods: {
+  //   ...mapActions([
+  //     'fetchGaUserLogin'
+  //   ])
+  // }
 }
 </script>
 
