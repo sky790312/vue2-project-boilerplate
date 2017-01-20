@@ -32,33 +32,39 @@ export default {
     Hello
   },
 
-  computed: mapGetters([
-    'count'
-  ]),
+  data () {
+    return {
 
-  methods: mapActions([
-    'increment',
-    'decrement'
-  ])
+    }
+  },
 
-  // computed: mapGetters([
-  // ]),
-  //
-  // methods: {
-  //   ...mapActions([
-  //     'fetchGaUserLogin'
-  //   ])
-  // }
+  computed: {
+    ...mapGetters([
+      'count'
+    ])
+  },
+
+  methods: {
+    ...mapActions([
+      'increment',
+      'decrement'
+    ])
+  }
 }
 </script>
 
-<style>
+<style lang="stylus">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 60px
+
+  .dropdown > input {
+    height: 30px
+  }
 }
+
 </style>
