@@ -3,9 +3,11 @@
     <h2>{{ $t("example") }}</h2>
     <p>{{ count }}</p>
     <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
+      <button @click="increment()">+</button>
+      <button @click="decrement()">-</button>
     </p>
+    <input type="text" v-model="newUserName">
+    <button @click="handleAddUserButton()">add</button>
     <div>
       <router-link to="/page1">Go to page1</router-link>
       <router-link to="/page2">Go to page2</router-link>
@@ -34,7 +36,7 @@ export default {
 
   data () {
     return {
-
+      newUserName: ''
     }
   },
 
@@ -47,8 +49,38 @@ export default {
   methods: {
     ...mapActions([
       'increment',
-      'decrement'
-    ])
+      'decrement',
+      'exampleGetFirebaseData',
+      'examplePostFirebaseData'
+    ]),
+
+    handleAddUserButton () {
+      const user = {
+        name: this.newUserName
+      }
+      this.examplePostFirebaseData(user)
+        .then(resp => {
+          // console.log('resp: ', resp)
+        })
+        .catch(error => {
+          console.log('catch error: ', error)
+        })
+    },
+
+    handleError () {
+
+    }
+  },
+
+  beforeMount () {
+    this.exampleGetFirebaseData()
+      .then(resp => {
+        // console.log('resp: ', resp)
+      })
+      .catch(error => {
+        this.handleError(error)
+        // console.log('catch error: ', error)
+      })
   }
 }
 </script>
