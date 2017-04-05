@@ -3,8 +3,9 @@ const state = {
 }
 
 const getters = {
-
+  count: state => state.count
 }
+
 const actions = {
   async increment ({ commit }) {
     commit('INCREMENT')
@@ -17,10 +18,10 @@ const actions = {
 
 const mutations = {
   INCREMENT (state) {
-    state => state.count++
+    state.count = state.count + 1
   },
   DECREMENT (state) {
-    state => state.count--
+    state.count = state.count - 1
   }
 }
 

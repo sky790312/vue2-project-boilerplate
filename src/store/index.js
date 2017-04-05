@@ -9,7 +9,7 @@ import count from './modules/count'
 Vue.use(Vuex)
 
 const state = {
-  count: 0
+
 }
 
 const store = new Vuex.Store({
