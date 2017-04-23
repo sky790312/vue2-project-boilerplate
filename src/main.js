@@ -13,9 +13,10 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(VueI18n)
 
-Vue.http.interceptors.push((resp, next) => {
-  next(resp => {
-    console.log('resp: ', resp)
+Vue.http.interceptors.push((request, next) => {
+  console.log('sending request: ', request)
+  next(response => {
+    console.log('response: ', response)
   })
 })
 
