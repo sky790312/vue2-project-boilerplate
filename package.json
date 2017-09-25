@@ -22,7 +22,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",
     "vue": "^2.0.1",
-    "vue-i18n": "^4.6.0",
+    "vue-i18n": "^5.0.3",
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1",
     "vuex": "^2.0.0"
